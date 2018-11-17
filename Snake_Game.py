@@ -5,11 +5,11 @@ import time
 import random
 
 #Now we will set up the screen
-root = turtle.Screen()            #Staring the turtle module
-root.title("Apratim's Snake Game")#Putting up the title on the window
-root.bgcolor('steel blue')        #Setting the background color
-root.setup(width=600,height=600)  #Setting the width and height of screen
-root.tracer(0)                  #0 turns off the animation on the screen,turns off
+wn = turtle.Screen()            #Staring the turtle module
+wn.title("Apratim's Snake Game")#Putting up the title on the window
+wn.bgcolor('steel blue')        #Setting the background color
+wn.setup(width=600,height=600)  #Setting the width and height of screen
+wn.tracer(0)                  #0 turns off the animation on the screen,turns off
                                 #the screen updates
 
 #Now we will create the
@@ -75,23 +75,23 @@ def move():
 
 #Now we will create some keyboard bindings,i.e,
 #we will make the pressed keys respond to our program
-root.listen()
+wn.listen()
 
-root.onkeypress(move_up,'w')
-root.onkeypress(move_up,'W')
-root.onkeypress(move_up,'Up')
+wn.onkeypress(move_up,'w')
+wn.onkeypress(move_up,'W')
+wn.onkeypress(move_up,'Up')
 
-root.onkeypress(move_down,'s')
-root.onkeypress(move_down,'S')
+wn.onkeypress(move_down,'s')
+wn.onkeypress(move_down,'S')
 root.onkeypress(move_down,'Down')
 
-root.onkeypress(move_left,'a')
-root.onkeypress(move_left,'A')
-root.onkeypress(move_left,'Left')
+wn.onkeypress(move_left,'a')
+wn.onkeypress(move_left,'A')
+wn.onkeypress(move_left,'Left')
 
-root.onkeypress(move_right,'d')
-root.onkeypress(move_right,'D')
-root.onkeypress(move_right,'Right')
+wn.onkeypress(move_right,'d')
+wn.onkeypress(move_right,'D')
+wn.onkeypress(move_right,'Right')
 
 #Declaring score, delay and list
 delay = 0.2
@@ -111,7 +111,7 @@ board.write('Score : 0  High Score : 0',align='center',font=('arial',20,'bold'))
 
 #Creating main loop of the game
 while True:
-    root.update()      #Everytime the program runs through the loop, it updates the
+    wn.update()      #Everytime the program runs through the loop, it updates the
                      #screen, which is why we are able to see the head
     #Whoa Whoa! We'll now check for a COLLISION with the BORDERS! Cheggit out!
     #This part is damn easy
