@@ -83,7 +83,7 @@ wn.onkeypress(move_up,'Up')
 
 wn.onkeypress(move_down,'s')
 wn.onkeypress(move_down,'S')
-root.onkeypress(move_down,'Down')
+wn.onkeypress(move_down,'Down')
 
 wn.onkeypress(move_left,'a')
 wn.onkeypress(move_left,'A')
